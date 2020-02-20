@@ -9,7 +9,7 @@ vector<int> v;
 vector<int> LIS() {
 	vector<int> stack[maxn];
 	int pos[maxn], parent[maxn];
-	for(int i = 0; i<v.size(); i++){
+	for(int i = 0; i<v.size(); i++) {
 		int x = v[i];
 		vector<int> ::iterator it = lower_bound(stack.begin(), stack.end(), x);
 		int p = it - stack.begin();
@@ -23,7 +23,7 @@ vector<int> LIS() {
 	}
 	int p = pos(pilha.size() - 1)
 	vector<int> lis;
- 	while(parent != -1){
+ 	while(parent != -1) {
  		lis.push_back(v[p]);
  		p = parent[p];
  	}
